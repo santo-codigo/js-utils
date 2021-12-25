@@ -1,0 +1,31 @@
+{
+  "name": "@badass-team-code/promise-utils",
+  "version": "0.0.1",
+  "description": "Utilities for dealing with promises",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badassteamcode/promise-utils.git"
+  },
+  "author": "Lucas Santos, Jean Cigoli e Davi Soares",
+  "license": "MIT",
+  "keywords": [
+    "promise",
+    "promises",
+    "recursive-promise-handler"
+  ],
+  "homepage": "https://github.com/badassteamcode/promise-utils#readme",
+  "bugs": {
+    "url": "https://github.com/badassteamcode/promise-utils/issues"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc --declaration",
+    "prepublish": "yarn build"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.3"
+  }
+}
