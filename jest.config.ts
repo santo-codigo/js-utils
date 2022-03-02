@@ -4,7 +4,6 @@ import { compilerOptions } from './tsconfig.json';
 
 export default {
   clearMocks: true,
-  roots: ['<rootDir>/tests'],
   collectCoverageFrom: ['<rootDir>/src/**/*.ts', '!<rootDir>/src/main/**'],
   coverageDirectory: 'coverage',
   coverageProvider: 'babel',
