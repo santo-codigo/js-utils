@@ -1,31 +1,61 @@
 {
-  "name": "@badass-team-code/promise-utils",
-  "version": "0.0.1",
-  "description": "Utilities for dealing with promises",
+  "name": "@badass-team-code/js-utils",
+  "version": "0.0.0",
+  "description": "Javascript utilities",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/badassteamcode/promise-utils.git"
+    "url": "git+https://github.com/badasst3am/js-utils.git"
   },
-  "author": "Lucas Santos, Jean Cigoli e Davi Soares",
+  "author": "Lucas Santos, Jean Cigoli and Davi Soares",
   "license": "MIT",
-  "keywords": [
-    "promise",
-    "promises",
-    "recursive-promise-handler"
-  ],
+  "keywords": [],
   "homepage": "https://github.com/badassteamcode/promise-utils#readme",
   "bugs": {
     "url": "https://github.com/badassteamcode/promise-utils/issues"
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc --declaration",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
     "prepublish": "yarn build"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-import-helpers": "^1.2.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "git-commit-msg-linter": "^4.1.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "prettier": "^2.5.1",
     "ts-node-dev": "^1.1.8",
-    "typescript": "^4.4.3"
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.5",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/plugin-proposal-decorators": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-transform-typescript-metadata": "^0.3.2",
+    "@types/node": "^17.0.19"
+  },
+  "buildDependencies": {
+    "@babel/cli": "^7.17.3",
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/plugin-proposal-decorators": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "rimraf": "^3.0.2",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.5"
   }
 }

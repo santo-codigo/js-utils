@@ -1,1 +1,1 @@
-export * from './recursive-resolve';
+export * from './resolver';

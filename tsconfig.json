@@ -1,16 +1,44 @@
 {
   "compilerOptions": {
+    "target": "es2017",
+    "lib": [
+      "es6"
+    ],
+    "module": "commonjs",
     "outDir": "./dist",
-    "module": "CommonJS",
-    "target": "ES2021",
-    "esModuleInterop": true,
-    "moduleResolution": "node",
+    "rootDir": "./src",
+    "removeComments": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
+    ],
     "allowJs": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "useUnknownInCatchVariables": false,
     "strict": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "forceConsistentCasingInFileNames": true
+    "rootDirs": [
+      "src",
+      "tests"
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@/tests/*": [
+        "../tests/*"
+      ],
+      "@/*": [
+        "*"
+      ]
+    }
   },
-  "include": ["src/**/*.ts", "tests/**/*.ts"],
-  "exclude": ["node_modules", ".vscode"]
+  "include": [
+    "src",
+    "tests"
+  ],
+  "exclude": []
 }
