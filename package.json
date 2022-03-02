@@ -16,7 +16,8 @@
     "url": "https://github.com/badassteamcode/promise-utils/issues"
   },
   "scripts": {
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist && yarn build:types",
+    "build:types": "tsc --emitDeclarationOnly",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
     "prepublish": "yarn build",
     "test": "jest --passWithNoTests --watch",
