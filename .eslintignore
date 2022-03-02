@@ -6,3 +6,4 @@ dist
 .vscode
 src/**/*.json
 **/*.jpeg
+jest.config.ts
