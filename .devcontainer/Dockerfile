@@ -1,4 +1,4 @@
-ARG VARIANT="16.14.0-buster"
+ARG VARIANT="16-buster"
 FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
 
 ENV TZ=America/Sao_Paulo
