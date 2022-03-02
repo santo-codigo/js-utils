@@ -32,4 +32,20 @@ describe('repeatUntilSucceed', () => {
 
     expect(result).toBe(null);
   });
+
+  test('should return data on success', async () => {
+    const sut = repeatUntilSucceed;
+    const params = {
+      callback: async () => {
+        return { success: true, data: { name: 'test' } };
+      },
+      timeToSleep: 0,
+      attempts: 3,
+      timeout: 100,
+    };
+
+    const result = await sut(params);
+
+    expect(result?.name).toBe('test');
+  });
 });
