@@ -16,4 +16,20 @@ describe('repeatUntilSucceed', () => {
 
     expect(result).toBe(null);
   });
+
+  test('should return null if attempts exceeded', async () => {
+    const sut = repeatUntilSucceed;
+
+    const params = {
+      callback: async () => {
+        return { success: false, data: { name: 'test' } };
+      },
+      timeToSleep: 0,
+      attempts: 4,
+    };
+
+    const result = await sut(params);
+
+    expect(result).toBe(null);
+  });
 });
