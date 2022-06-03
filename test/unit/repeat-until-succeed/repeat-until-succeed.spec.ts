@@ -1,4 +1,4 @@
-import { repeatUntilSucceed } from './repeat-until-succeed';
+import { repeatUntilSucceed } from '../../../src/repeat-until-succeed';
 
 describe('repeatUntilSucceed', () => {
   test('should return null if timeout exceeded', async () => {

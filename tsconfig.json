@@ -6,7 +6,6 @@
     ],
     "module": "commonjs",
     "outDir": "./dist",
-    "rootDir": "./src",
     "removeComments": true,
     "typeRoots": [
       "./node_modules/@types",
@@ -23,14 +22,14 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "declaration": true,
+    "baseUrl": "src",
     "rootDirs": [
       "src",
-      "tests"
+      "test"
     ],
-    "baseUrl": "src",
     "paths": {
-      "@/tests/*": [
-        "../tests/*"
+      "@/test/*": [
+        "../test/*"
       ],
       "@/*": [
         "*"
@@ -39,7 +38,7 @@
   },
   "include": [
     "src",
-    "tests"
+    "test"
   ],
   "exclude": []
 }
